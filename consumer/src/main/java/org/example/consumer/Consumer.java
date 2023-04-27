@@ -3,7 +3,9 @@ package org.example.consumer;
 import org.example.service.Calculate;
 import org.example.service.annotation.Operation;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.ServiceLoader;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Consumer {
