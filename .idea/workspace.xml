@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42104fdd-f645-4d58-b6fb-47d3d0def318" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/org/example/consumer/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/org/example/service/annotation/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/org/example/service/annotation/Operation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Ormuud2VN47Rpt4jf7Ec2pGwtW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -35,12 +35,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Consumer.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Maven.lab1multimodule [clean].executor": "Run",
+    "Maven.lab1multimodule [compile].executor": "Run",
+    "Maven.lab1multimodule [validate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dynamic-annotations",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/fredr/IdeaProjects/lab1multimodule",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/fredr/IdeaProjects/multimodule",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Consumer">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.consumer.Consumer" />
       <module name="consumer" />
@@ -63,9 +69,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Consumer" />
+        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
