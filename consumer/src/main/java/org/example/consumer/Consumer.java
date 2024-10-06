@@ -1,6 +1,7 @@
 package org.example.consumer;
 
 import org.example.service.Calculate;
+import org.example.service.annotation.Operation;
 
 import java.util.*;
 
@@ -18,7 +19,8 @@ public class Consumer {
 
     private static void loadCalculateMap() {
         for (var calculation : calculations) {
-            calculateMap.put(calculation.toString(), calculation);
+            Operation operation = calculation.getClass().getAnnotation(Operation.class);
+            calculateMap.put(operation.value(), calculation );
         }
     }
 
@@ -37,7 +39,7 @@ public class Consumer {
     private static void menu() {
         displayMenu();
 
-        String choice = scanner.next();
+        String choice = scanner.next().toLowerCase();
         if (calculateMap.containsKey(choice)) {
             if(choice.equals("exit")) {
                 System.out.println("Avslutar...");
@@ -54,6 +56,10 @@ public class Consumer {
 
     private static double getDouble() {
         System.out.print("Enter a number: ");
+        while   (!scanner.hasNextDouble()) {
+            System.out.print("Invalid input. Please enter a number: ");
+            scanner.next();
+        }
         return scanner.nextDouble();
     }
 

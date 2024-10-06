@@ -12,7 +12,8 @@ public class Multiply implements Calculate {
 
     @Override
     public void printResult(double a, double b) {
-
+        double result = calculate(a,b);
+        System.out.println(a + " * " + b + " = " + result);
     }
 
     @Override
