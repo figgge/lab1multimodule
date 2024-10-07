@@ -4,6 +4,7 @@ import org.example.service.Calculate;
 import org.example.service.annotation.Operation;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Consumer {
     static Scanner scanner = new Scanner(System.in);
@@ -12,16 +13,19 @@ public class Consumer {
 
     public static void main(String[] args) {
 
-        loadCalculateMap();
+        calculateMap = loadCalculateMap();
 
         menu();
     }
 
-    private static void loadCalculateMap() {
-        for (var calculation : calculations) {
-            Operation operation = calculation.getClass().getAnnotation(Operation.class);
-            calculateMap.put(operation.value(), calculation );
-        }
+
+    private static Map<String, Calculate> loadCalculateMap() {
+        return calculations.stream()
+                .map(ServiceLoader.Provider::get)
+                .collect(Collectors.toMap(
+                        calculation -> calculation.getClass().getAnnotation(Operation.class).value(),
+                        calculation -> calculation
+                ));
     }
 
     private static void displayMenu() {
